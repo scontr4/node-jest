@@ -12,6 +12,3 @@ describe('js-foundation/01-template.test.ts', () => {
   })
 
 })
-
-
-emailTemplate
