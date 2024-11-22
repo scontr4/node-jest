@@ -1,6 +1,6 @@
-import { getUserById } from '../../src/js-foundation/03-callbacks';
+import { getUserById } from '../../src/js-foundation/04-arrow';
 
-describe('js-foundation/03-callbacks.test.ts', () => { 
+describe('js-foundation/04-arrow.test.ts', () => { 
 
   test('should return error is user doesnt exist', (done) => {  // done here
     
