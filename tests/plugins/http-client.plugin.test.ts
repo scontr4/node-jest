@@ -1,4 +1,8 @@
 import { httpClientPlugin } from '../../src/plugins/http-client.plugin';
+
+
+
+
 describe('plugins/get-id.plugin.ts', () => { 
   
   test('get method should return a string', async() => { 
