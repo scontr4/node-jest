@@ -18,15 +18,6 @@ describe('plugins/get-age.plugin.ts', () => {
     expect(age).toBe(calculatedAge); 
   })
 
-  test('should return current age (with spies)', () => { 
-    const spy = jest.spyOn(Date.prototype, 'getFullYear').mockReturnValue(2000);
-    const age = getAge('anything');
-    const calculatedAge = new Date().getFullYear() - 2000;
-
-    expect(age).toBe(calculatedAge); 
-    expect(spy).toHaveBeenCalled();
-  })
-
   test('should throw an error if birthdate is not a valid date', () => {
     try {
       const birthdate = 'ASCII 24';
@@ -36,6 +27,16 @@ describe('plugins/get-age.plugin.ts', () => {
     }
 
   })
+  
+  test('should return current age (with spies)', () => { 
+    const spy = jest.spyOn(Date.prototype, 'getFullYear').mockReturnValue(2000);
+    const age = getAge('anything');
+    const calculatedAge = new Date().getFullYear() - 2000;
+
+    expect(age).toBe(calculatedAge); 
+    expect(spy).toHaveBeenCalled();
+  })
+
 
 
 
