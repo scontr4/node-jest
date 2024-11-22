@@ -1,8 +1,8 @@
-// const getAgePlugin = require('get-age');
-
 
 export const getAge = ( birthdate: string ) => {
-
-  // return getAgePlugin(birthdate);
-  return new Date().getFullYear() - new Date(birthdate).getFullYear();
+  const birthYear = new Date(birthdate).getFullYear();
+  if (isNaN(birthYear)) {
+    throw new Error('Invalid birthdate');
+  }
+  return new Date().getFullYear() - birthYear;
 }
