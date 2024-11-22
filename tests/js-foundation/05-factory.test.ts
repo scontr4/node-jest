@@ -1,7 +1,7 @@
 import { buildMakePerson } from '../../src/js-foundation/05-factory';
 
 
-describe('05-factory.test.ts', () => { 
+describe('js-foundation/05-factory.test.ts', () => { 
 
   // Manual mocks
   const getUUID = () => '1234'
